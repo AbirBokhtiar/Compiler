@@ -1,0 +1,5 @@
+Abir Bokhtiar
+Id-22-47038-1
+
+Hello World! I am CPP.
+position = initial + rate * 60

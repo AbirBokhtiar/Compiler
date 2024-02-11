@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1707548465 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\doctask1.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+
+1707548353 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\main.cpp
+	<iostream>
+
+1707548845 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\doctask2.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+
+1707548845 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\doctask3.1.cpp
+	<stdio.h>
+
+1707549062 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\doctask3.2.cpp
+	<stdio.h>
+
+1707549147 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\programs\document\doctask4.cpp
+	<fstream>
+
