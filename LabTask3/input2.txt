@@ -1,0 +1,7 @@
+program
+a+b
+2ab
+void main(){
+float a = 2;
+0.2.5;
+}

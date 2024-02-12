@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1707751646 source:c:\users\user\onedrive - american international university-bangladesh\desktop\compiler\lab\lab3\labtask3\main.cpp
+	<iostream>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
