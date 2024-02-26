@@ -1,0 +1,10 @@
+int main(){
+    int x;
+    float calculate(int a, float b) {
+        return a + b;
+    }
+    void displayMessage() {
+        cout << "Hello, world!";
+    }
+    void root(int a);
+}

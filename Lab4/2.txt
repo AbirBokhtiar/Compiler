@@ -1,0 +1,55 @@
+#include <iostream>
+#include <fstream>
+#include <cstring>
+#include <cctype>
+
+using namespace std;
+
+bool isKeyword(const char *buffer) {
+    const char* keywords[] = {"char", "float", "int", "long", "void"};
+    for (const char* keyword : keywords) {
+        if (strcmp(buffer, keyword) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isValidFunctionDefinition(const char *buffer) {
+    // Check if the buffer contains tokens typical of a function definition
+    // Here we assume that a function definition has the form: returnType functionName(parameters) { body }
+    // We check for the presence of '(' after the function name to ensure it's not a function declaration
+    if (strstr(buffer, "(") && strstr(buffer, ")") && strstr(buffer, "{") && strstr(buffer, "}")) {
+        return true;
+    }
+    return false;
+}
+
+int main() {
+    char ch, buffer[100];
+    ifstream fin("input3Lab4.txt");
+
+    if (!fin.is_open()) {
+        cout << "Error opening the file\n";
+        exit(0);
+    }
+
+    while (fin.get(ch)) {
+        if (isalnum(ch) || ch == '_') {
+            strncat(buffer, &ch, 1);
+        } else if ((ch == ' ' || ch == '\n' || ch == ';' || ch == '{') && (strlen(buffer) != 0)) {
+            buffer[strlen(buffer)] = '\0';
+            if (isKeyword(buffer)) {
+                cout << buffer << " is keyword\n";
+            } else if (isValidFunctionDefinition(buffer)) {
+                cout << buffer << " is function definition\n";
+            } else {
+                cout << buffer << " is variable declaration\n";
+            }
+            buffer[0] = '\0';
+        }
+    }
+
+    fin.close();
+    return 0;
+}
